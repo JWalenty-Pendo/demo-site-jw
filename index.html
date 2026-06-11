@@ -406,95 +406,74 @@
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- =====================================================
+                         PENDO BADGE TEST SECTION
+                         Three disabled "Select Assignee" fields + one active field.
+                         The JS at the bottom of this file fires on page load and
+                         injects a pink badge next to every [data-disabled="true"] element.
+                         If all three get a badge and the active field does not, the
+                         approach works and can be moved into a Pendo custom HTML guide step.
+                    ====================================================== -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Task Assignments
+                                <span class="badge badge-warning ml-2" style="font-size:11px;">Pendo Badge Test</span>
+                            </h6>
                         </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="card-body">
+                            <p class="text-sm text-gray-600 mb-3">
+                                Fields marked with a pink <strong>?</strong> badge are disabled because the assignee has been deactivated or merged.
+                                If all three disabled rows show a badge and "Jane Smith" does not, the multi-element approach is working.
+                            </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Assignee</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Quarterly Review</td>
+                                        <td>
+                                            <span data-disabled="true" data-test-id="assignee-1"
+                                                style="color:#999; font-style:italic;">Select Assignee</span>
+                                        </td>
+                                        <td><span class="badge badge-danger">Blocked</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Client Onboarding</td>
+                                        <td>
+                                            <span data-disabled="true" data-test-id="assignee-2"
+                                                style="color:#999; font-style:italic;">Select Assignee</span>
+                                        </td>
+                                        <td><span class="badge badge-danger">Blocked</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Budget Approval</td>
+                                        <td>
+                                            <span data-disabled="true" data-test-id="assignee-3"
+                                                style="color:#999; font-style:italic;">Select Assignee</span>
+                                        </td>
+                                        <td><span class="badge badge-danger">Blocked</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product Roadmap</td>
+                                        <td>
+                                            <span data-test-id="assignee-4">Jane Smith</span>
+                                        </td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+                    <!-- ===================================================
+                         END PENDO BADGE TEST SECTION
+                    ==================================================== -->
 
                     <!-- Content Row -->
-
                     <div class="row">
 
                         <!-- Area Chart -->
@@ -787,6 +766,45 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- =====================================================
+         PENDO MULTI-BADGE TEST
+         This fires on page load and injects a pink badge next
+         to every element with [data-disabled="true"].
+
+         PHASE 1 (now): running inline here to validate the JS
+         works in the browser before involving Pendo at all.
+
+         PHASE 2: once confirmed, remove this block and paste
+         the same JS into a Pendo custom HTML guide step's
+         onLoad handler, targeting this page URL.
+    ====================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('[data-disabled="true"]').forEach(function (el) {
+                var badge = document.createElement('span');
+                badge.style.cssText = [
+                    'display:inline-block',
+                    'margin-left:6px',
+                    'background:#FF3366',
+                    'color:#fff',
+                    'border-radius:50%',
+                    'width:16px',
+                    'height:16px',
+                    'text-align:center',
+                    'font-size:11px',
+                    'line-height:16px',
+                    'cursor:pointer',
+                    'vertical-align:middle',
+                    'font-style:normal',
+                    'font-weight:bold'
+                ].join(';');
+                badge.innerText = '?';
+                badge.title = 'This assignee has been deactivated or merged. Please select a new assignee.';
+                el.parentNode.insertBefore(badge, el.nextSibling);
+            });
+        });
+    </script>
 
 </body>
 
