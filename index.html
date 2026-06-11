@@ -779,32 +779,7 @@
          the same JS into a Pendo custom HTML guide step's
          onLoad handler, targeting this page URL.
     ====================================================== -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('[data-disabled="true"]').forEach(function (el) {
-                var badge = document.createElement('span');
-                badge.style.cssText = [
-                    'display:inline-block',
-                    'margin-left:6px',
-                    'background:#FF3366',
-                    'color:#fff',
-                    'border-radius:50%',
-                    'width:16px',
-                    'height:16px',
-                    'text-align:center',
-                    'font-size:11px',
-                    'line-height:16px',
-                    'cursor:pointer',
-                    'vertical-align:middle',
-                    'font-style:normal',
-                    'font-weight:bold'
-                ].join(';');
-                badge.innerText = '?';
-                badge.title = 'This assignee has been deactivated or merged. Please select a new assignee.';
-                el.parentNode.insertBefore(badge, el.nextSibling);
-            });
-        });
-    </script>
+
 
 </body>
 
